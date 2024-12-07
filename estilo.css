@@ -1,0 +1,622 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    font-family: "Carlito", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.home{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-left: -200px;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu li{
+    margin: 20px;
+}
+.home img{
+    max-width: 90px;
+    max-height: 100px;
+    padding: 10px;
+}
+.home li{
+    list-style: none;
+    background-color: white;
+    padding:7px 9px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.home a{
+    text-decoration: none;
+    color: #FF5400;
+    padding: 9px 7px;
+}
+.normal:hover{
+    color: white;
+}
+.home li:hover{
+    background-image:linear-gradient(to bottom, #FFBD00,#FF0054) ;
+    transform: scale(1.1);
+    color: white;
+}
+.home #cursotopo{
+    padding: 3px;
+    background-image:linear-gradient(#FFBD00,#FF0054) ;
+    border-radius: 5px;
+}
+.home #cursotopo a{
+    display: block;
+    background-color:white;
+    padding:7px 9px;
+    border-radius: 6px;
+}
+.home #matriculatopo{
+    background-image: linear-gradient(to right, #FFBD00,#FF0054);
+    border-radius: 5px;
+    padding: 8px;
+}.topo{
+    display: flex;
+    align-items: center;
+}
+.topo h1{
+    color: #9E0059;
+    width: 600px;
+    font-size: 50px;
+    text-align: center;
+}
+.topo #meninatopo{
+    width: 708px;
+    height: 674px;
+    object-fit: contain;
+}.cursos{
+    font-size: 20px;
+    color: #390099;
+    display: grid;
+    grid-template-areas: 'pergunta meninacurso' 'resposta meninacurso' 'opcoes meninacurso';
+}
+#secao1{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    color: white;
+    background-image:linear-gradient(to right, #390099,#9E0059);
+    height: 45px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.cursos h2{
+    margin-left: 90px;
+    margin-top: 64px;
+    text-align: center;
+    width: 450px;
+    grid-area: pergunta;
+}
+.cursos h3{
+    margin-left: 40px;
+    grid-area: resposta;
+    margin-top: 64px;
+    text-align: center;
+    width: 550px;
+}
+.idiomacurso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 64px;
+    margin-left: 40px;
+    width: 598px;
+}
+#eua{
+    transition: transform 0.3s ease;
+}
+#eua:hover{
+    transform: scale(1.1);
+}
+#alema{
+    transition: transform 0.3s ease;
+}
+#alema:hover{
+    transform: scale(1.1);
+}
+#espan{
+    transition: transform 0.3s ease;
+}
+#espan:hover{
+    transform: scale(1.1);
+}
+#fran{
+    transition: transform 0.3s ease;
+}
+#fran:hover{
+    transform: scale(1.1);
+}
+.cursos #meninacurso{
+    grid-area: meninacurso;
+    width: 450px;
+    object-fit: contain;
+}
+
+#secao2{
+    display: flex;
+    margin-top: 66px;
+    justify-content: center; 
+    align-items: center;
+    color: white;
+    background-image:linear-gradient(to right, #FF5400,#FFBD00);
+    height: 45px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.horarios{
+    margin-left: 15%;
+    margin-top: 60px;
+}
+.horarios .red{
+    color: #FF5400;
+}
+.horarios .laranja{
+    color:#FF9A00;
+}
+.horarios #cinco{
+    color: #FFBD00;
+} 
+#seg{
+    color: #FF5400;
+}
+#sex{
+    color: #FFBC00;
+}
+.dias{
+    margin-left: -60px;
+    width: 954px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.horas{
+    display: flex;
+    align-items: flex-start;
+    width: 900px;
+}
+.horas #nove{
+    margin-left: 20px;
+    margin-right: 143px;
+}
+.horas #dez{
+    margin-right: 148px;
+}
+.horas #onze{
+    margin-right: 148px;
+}
+.horas #quatro{
+    margin-right: 143px;
+}
+
+#secao3{
+    display: flex;
+    margin-top: 66px;
+    justify-content: center; 
+    align-items: center;
+    color: white;
+    background-image:linear-gradient(to right, #FF0054,#FF5400);
+    height: 45px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.depoimentos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+#alice{
+    border: solid 3px #FF0054;
+    width: 310px;
+    height: 235px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-areas: 'foto nome' 'foto curso' 'depoi depoi' 'estrela estrela';
+    margin-top: 50px;
+    box-shadow: 3px 3px black;
+    transition: transform 0.3s ease;
+}
+#alice:hover{
+    transform: scale(1.1);
+}
+.fotoperfil{
+    border-radius: 100%;
+    width: 75px;
+    height: 80px;
+    object-fit: cover;
+}
+#alice .fotoperfil{
+    grid-area: foto;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#alice h2{
+    color: #FF0054;
+    grid-area: nome;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    margin-left: -50px;
+}
+#alice h3{
+    color: #8D8D8D;
+    grid-area: curso;
+    margin-left: -50px;
+}
+#alice h4{
+    color: black;
+    text-align: left;
+    grid-area: depoi;
+    width: 270px;
+    margin-left: 20px;
+}
+#estrela{
+    display: flex;
+    align-items: center;
+    width: 110px;
+    height: auto;
+    grid-area: estrela;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+#estrela img{
+    width: 20px;
+    height: auto;
+}
+
+#vinicius{
+    border: solid 3px #FF2A2A;
+    width: 310px;
+    height: 235px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-areas: 'foto nome' 'foto curso' 'depoi depoi' 'estrela estrela';
+    margin-top: 50px;
+    box-shadow: 3px 3px black;
+    transition: transform 0.3s ease;
+}
+#vinicius:hover{
+    transform: scale(1.1);
+}
+#vinicius .fotoperfil{
+    grid-area: foto;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#vinicius h2{
+    color: #FF2A2A;
+    grid-area: nome;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    margin-left: -50px;
+}
+#vinicius h3{
+    color: #8D8D8D;
+    grid-area: curso;
+    margin-left: -50px;
+}
+#vinicius h4{
+    color: black;
+    text-align: left;
+    grid-area: depoi;
+    width: 270px;
+    margin-left: 20px;
+}
+
+#paula{
+    border: solid 3px #FF5400;
+    width: 310px;
+    height: 235px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-areas: 'foto nome' 'foto curso' 'depoi depoi' 'estrela estrela';
+    margin-top: 50px;
+    box-shadow: 3px 3px black;
+    transition:transform 0.3s ease;
+}
+#paula:hover{
+    transform: scale(1.1);
+}
+#paula .fotoperfil{
+    grid-area: foto;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#paula h2{
+    color: #FF5400;
+    grid-area: nome;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    margin-left: -50px;
+}
+#paula h3{
+    color: #8D8D8D;
+    grid-area: curso;
+    margin-left: -50px;
+}
+#paula h4{
+    color: black;
+    text-align: left;
+    grid-area: depoi;
+    width: 270px;
+    margin-left: 20px;
+}
+
+#secao4{
+    display: flex;
+    margin-top: 66px;
+    justify-content: center; 
+    align-items: center;
+    color: white;
+    background-image:linear-gradient(to right, #024AC7,#012461);
+    height: 45px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.historia{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#ana_paula{
+    transition:transform 0.3s ease;
+}
+#ana_paula:hover{
+    transform: scale(1.1);
+}
+.historia h2{
+    color: #012461;
+    width: 800px;
+    text-align: left;
+    margin-top: 95px;
+}
+
+#matricula{
+    margin: 0 auto;
+    margin-top: 100px;
+    width:1280px;
+    height:716px;
+    border-radius: 55px;
+    background-image:linear-gradient(to right, #FFBD00,#FF0054);
+    color: white;
+}
+.informacoes{
+    margin: 0 auto;
+    width: 1074px;
+    height: 531px;
+    display: grid;
+    justify-content: space-around;
+    grid-template-areas: 'nome sobrenome' 'email celular' 'senha confirmar' 'curso curso';
+    font-weight: normal;
+}
+#matricula h1{
+    text-align: center;
+    padding: 50px;
+    font-size: 50px;
+}
+.informacoes h3{
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.informacoes h4{
+    font-weight: 400;
+    transition:transform 0.3s ease;
+}
+.informacoes h4:hover{
+    transform: scale(1.1);
+}
+#nome h4{
+    text-align: left;
+    padding-top: 8px;
+    padding-left: 10px;
+    width: 301px;
+    height: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+#email h4{
+    text-align: left;
+    padding-top: 8px;
+    padding-left: 10px;
+    width: 301px;
+    height: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+#senha h4{
+    text-align: left;
+    padding-top: 8px;
+    padding-left: 10px;
+    width: 301px;
+    height: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+#curso h4{
+    text-align: left;
+    padding-top: 8px;
+    padding-left: 10px;
+    width: 301px;
+    height: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+#sobrenome h4{
+    text-align: left;
+    padding-top: 8px;
+    padding-left: 10px;
+    width: 301px;
+    height: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+#celular h4{
+    text-align: left;
+    padding-top: 8px;
+    padding-left: 10px;
+    width: 301px;
+    height: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+#confirmar h4{
+    text-align: left;
+    padding-top: 8px;
+    padding-left: 10px;
+    width: 301px;
+    height: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+#nome{
+    grid-area: nome;
+}
+
+#email{
+    grid-area: email;
+}
+#senha{
+    grid-area: senha;
+}
+#curso{
+    grid-area: curso;
+}
+#sobrenome{
+    grid-area: sobrenome;
+}
+#celular{
+    grid-area: celular;
+}
+#confirmar{
+    grid-area: confirmar;
+}
+footer{
+    height: 510px;
+    width: 100%;
+    margin-top: 100px;
+    background-image:linear-gradient(to bottom,#FF0090,#9E0059);
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+    color: white;
+    display: grid;
+    grid-template-areas: 'logo contato' 'logo num' 'logo  apps' 'direito direito';
+    align-items: center;
+}
+.num{
+    display: flex;
+    flex-direction: row;
+    margin-left: 220px;
+    grid-area: num;
+    margin-top: 51px;
+    margin-bottom: 51px;
+}
+footer h2{
+    margin-top: 8px;
+    margin-left: 10px;
+    font-weight: 400;
+    text-align: center;
+}
+footer p{
+    font-weight:400;
+    grid-area: direito;
+    text-align: center;
+}
+footer #logo{
+    width: 462px;
+    height: 260px;
+    object-fit: cover;
+    margin: 0 auto;
+    grid-area: logo;
+    margin-top: 150px;
+}
+#logo{
+    transition: transform 0.3s ease;
+}
+#logo:hover{
+    transform: scale(1.1);
+}
+footer h1{
+    grid-area: contato;
+}
+#contato{
+    margin-top: 160px;
+    text-align: center;
+}
+.apps{
+    grid-area: app;
+}
+#telefone{
+    width:42px;
+    height:42px;
+    object-fit: cover;
+}
+#insta{
+    width: 61px;
+    height: 61px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+#insta:hover{
+    transform: scale(1.3);
+}
+#face{
+    margin-bottom: 9px;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+#face:hover{
+    transform: scale(1.3);
+}
+#wpp{
+    margin-bottom: 12px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+#wpp:hover{
+    transform: scale(1.3);
+}
+.app{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
