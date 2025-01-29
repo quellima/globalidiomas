@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="estilo.css" rel="stylesheet">
     <title>Global Idiomas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,31 +11,34 @@
 </head>
 <body>
     <header class="home" id="home">
-        <img src="Imagens/logocompleta.png">
-        <menu class="menu">
-        <li id="cursotopo"><a href="#secao1">Cursos</a></li>
-        <li><a href="#secao2" class="normal">Horários</a></li>
-        <li><a href="#secao3" class="normal">Depoimentos</a></li>
-        <li><a href="#secao4" class="normal">História</a></li>
-        <li><a href="#contato" class="normal">Contato</a></li>
-        <li id="matriculatopo"><a href="#matricula" style="color:white">Matrícula</a></li>
-        </menu>
+            <img src="Imagens/logocompleta.png" id="logohome">
+        <nav>
+            <label class="bt-menu" for="menu-check"><img src="Imagens/hamburguer.png" id="hamburguer"></label>
+            <input type="checkbox" id="menu-check">
+            <ul class="menu">
+                <li id="cursotopo"><a href="#secao1">Cursos</a></li>
+                <li><a href="#secao2" class="normal">Horários</a></li>
+                <li><a href="#secao3" class="normal">Depoimentos</a></li>
+                <li><a href="#secao4" class="normal">História</a></li>
+                <li><a href="#contato" class="normal">Contato</a></li>
+                <li id="matriculatopo"><a href="#matricula" style="color:white">Matrícula</a></li>
+            </ul>
+        </nav>
     </header>
     
-    <nav>
         <div class="container">
             <section class="um">
                 <div class="topo">
                     <img id="meninatopo" src="Imagens/meninatopo.png">
-                    <h1>A Global Idiomas prepara nossos alunos para viagens, intercâmbios e certificações internacionais.</h1>
+                    <h1 id="textotopo">A Global Idiomas prepara nossos alunos para viagens, intercâmbios e certificações internacionais.</h1>
                 </div>
             </section>
 
             <section class="dois">
-                <h1 id="secao1">CURSOS</h1>
+                <h1 class="secao" id="secao1">CURSOS</h1>
                 <div class="cursos">
-                    <h2>“Quais as vantagens de saber mais de um idioma?”</h2>
-                    <h3>Saber mais de um idioma melhora o raciocínio, facilita o aprendizado de novas línguas, abre oportunidades de trabalho, permite maior compreensão cultural, facilita viagens e pode até ajudar a prevenir doenças cognitivas. É uma porta para novos conhecimentos e experiências!</h3>
+                    <h2 id="pergunta">“Quais as vantagens de saber mais de um idioma?”</h2>
+                    <h3 id="resposta">Saber mais de um idioma melhora o raciocínio, facilita o aprendizado de novas línguas, abre oportunidades de trabalho, permite maior compreensão cultural, facilita viagens e pode até ajudar a prevenir doenças cognitivas. É uma porta para novos conhecimentos e experiências!</h3>
                     <!--<img id="idiomascurso" src="Imagens/idiomascurso.png">*/-->
                     <div class="idiomacurso">
                         <a href="#matricula"><img src="Imagens/eua2.png" id="eua"></a>
@@ -47,25 +51,15 @@
             </section>
 
             <section class="tres"> 
-            <h1 id="secao2">HORÁRIOS</h1>
+            <h1 class="secao" id="secao2">HORÁRIOS</h1>
             <div class="horarios">
-                <div class="horas">
-                    <h3 class="red" id="nove">9:00</h3>
-                    <h3 class="red" id="dez">10:00</h3>
-                    <h3 class="laranja" id="onze">11:00-15:00</h3>
-                    <h3 class="laranja" id="quatro">16:00</h3>
-                    <h3 id="cinco">17:00</h3>
-                </div>
-                <img src="Imagens/horas (1).png">
-                <div class="dias">
-                <h3 id="seg">Segunda</h3>
-                <h3 id="sex">Sexta</h3>
-                </div>
+                 <img src="Imagens/horarios.png">            
+                 <img src="Imagens/horasVertical.png" id="vertical">
             </div>
             </section>
 
             <section class="quatro">
-                <h1 id="secao3">DEPOIMENTOS</h1>
+                <h1 class="secao" id="secao3">DEPOIMENTOS</h1>
                 <div class="depoimentos">
                     <div class="perfis" id="alice">
                         <img src="Imagens/perfil1.jpg" class="fotoperfil">
@@ -110,7 +104,7 @@
             </section>
 
             <section class="cinco">
-                <h1 id="secao4">HISTÓRIA</h1>
+                <h1 class="secao" id="secao4">HISTÓRIA</h1>
                 <div class="historia">     
                 <img  src="Imagens/ana paula.png" id="ana_paula">
                     <h2>A história da Global Idiomas começa em 2005, quando Ana Paula, uma apaixonada por idiomas e culturas, percebeu que o ensino de línguas poderia ser mais dinâmico e acessível. Inspirada por suas próprias experiências no exterior e com um desejo de preparar alunos para o mundo, fundou a escola com uma metodologia inovadora, centrada na comunicação real e prática.
@@ -123,41 +117,49 @@
                 <div id="matricula">
                     <h1>MATRÍCULA</h1>
                     <div class="informacoes">
-                        <div id="nome">
+                        <div class="sobre" id="nome">
                             <h3>Primeiro nome</h3>
-                            <h4>Digite seu primeiro nome</h4>
+                            <input id="primeiroNome" type="text" placeholder="Digite seu primeiro nome">
                         </div>
-                        <div id="email">
+                        <div class="sobre" id="email">
                             <h3>E-mail</h3>
-                            <h4>Digite seu e-mail</h4> 
+                            <input  type="text" placeholder="Digite seu e-mail">
                         </div>
-                        <div id="senha">
+                        <div class="sobre" id="senha">
                             <h3>Senha</h3>
-                            <h4>Digite sua senha</h4> 
+                            <input  type="text" placeholder="Digite sua senha">
                         </div>
-                        <div id="curso">
+                        <div class="sobre" id="curso">
                             <h3>Curso</h3>
-                            <h4>Digite o curso desejado</h4> 
+                            <input  type="text" placeholder="Digite o curso desejado">
                         </div>
-                        <div id="sobrenome">
+                        <div class="sobre" id="sobrenome">
                             <h3>Sobrenome</h3>
-                            <h4>Digite seu sobrenome</h4> 
+                            <input  type="text" placeholder="Digite seu sobrenome">
                         </div>
-                        <div id="celular">
+                        <div class="sobre" id="celular">
                             <h3>Celular</h3>
-                            <h4>(xx) xxxx-xxxx</h4> 
+                            <input class="form" type="text" placeholder="(xx) xxxx-xxxx">
                         </div>
-                        <div id="confirmar">
-                            <h3>Confirme sua senha</h3>
-                            <h4>Digite sua senha novamente</h4> 
+                        <div class="sobre" id="confirmar">
+                            <h3>Confirmar senha</h3>
+                            <input type="text" placeholder="Digite sua senha novamente">
                         </div>
                     </div>
+                    <button id="salvar">CONFIRMAR</button>
+                    <h1 id="mensagem"></h1>
                 </div>
             </section>
-
+            <script>
+                let botao = document.getElementById("salvar");
+                let msg = document.getElementById("mensagem");
+                let nome = document.getElementById("primeiroNome");
+                botao.addEventListener("click", function(){
+                    msg.innerText = "Matricula realizada com sucesso "+nome.value+"!";
+                })
+            </script>
             <footer>
-                <a href="#home"><img id="logo" src="Imagens/logocompleta.png    "></a>
-                <p>&copy;2024 Global Idiomas</p>
+                <a href="#home"><img id="logo" src="Imagens/logocompleta.png"></a>
                 <div id="contato">
                     <h1>CONTATO</h1>
                     <div class="num">
@@ -170,9 +172,8 @@
                         <a href="https://wa.me/qr/IY4IYASQA4ZVA1" target="_blank"><img id="wpp" src="Imagens/whatsapp.png"></a>
                     </div>
                 </div>
+                <p>&copy;2024 Global Idiomas</p>
             </footer>
-            
         </div>
-    </nav>
 </body>
 </html>
