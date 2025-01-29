@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.container{
+    max-width: 100%;
+    height: auto;
+}
 body{
     background-color: white;
     font-family: "Carlito", sans-serif;
@@ -12,32 +15,55 @@ body{
 
 }
 img{
-    max-width: 100%;
-    height: auto;
+    object-fit: contain;
 }
 
+
+/*nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}*/
 .home{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
-    margin-left: -200px;
+    margin: 0 auto;
+    width:100%;
+    max-width: 1280px;
 }
 .menu{
+    list-style: none;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center
 }
-.menu li{
-    margin: 20px;
+
+#menu-check{
+    display: none;
+}
+.bt-menu{
+    display: none;
+}
+
+.secao{
+    width: 100%;
 }
 .home img{
-    max-width: 90px;
-    max-height: 100px;
+    max-width:150px;
+    height: auto;
+    object-fit: contain;
     padding: 10px;
 }
-.home li{
-    list-style: none;
+.menu li{
+    margin: 20px 5px;
     background-color: white;
     padding:7px 9px;
     border-radius: 5px;
@@ -71,26 +97,42 @@ img{
     background-image: linear-gradient(to right, #FFBD00,#FF0054);
     border-radius: 5px;
     padding: 8px;
-}.topo{
+}
+.topo{
     display: flex;
     align-items: center;
+    max-width: 1280px;
+    width:100%;
+    margin:0 auto;
+    padding:10px;
 }
 .topo h1{
     color: #9E0059;
-    width: 600px;
     font-size: 50px;
     text-align: center;
 }
 .topo #meninatopo{
-    width: 708px;
-    height: 674px;
+    width: 60%;
+    height: auto;
     object-fit: contain;
-}.cursos{
+}
+.cursos{
+    max-width: 1280px;
+    width:100%;
+    margin:0 auto;
+    padding:10px;
     font-size: 20px;
     color: #390099;
     display: grid;
-    grid-template-areas: 'pergunta meninacurso' 'resposta meninacurso' 'opcoes meninacurso';
+    grid-template-columns:1fr 1fr;
+    column-gap: 20px;
+    grid-template-areas:
+        'pergunta meninacurso'
+        'resposta meninacurso'
+        'opcoes meninacurso';
 }
+
+
 #secao1{
     display: flex;
     justify-content: center; 
@@ -98,32 +140,35 @@ img{
     color: white;
     background-image:linear-gradient(to right, #390099,#9E0059);
     height: 45px;
-    width: 100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 .cursos h2{
-    margin-left: 90px;
-    margin-top: 64px;
+   
+    padding-top:20px;
     text-align: center;
-    width: 450px;
     grid-area: pergunta;
+    
 }
 .cursos h3{
-    margin-left: 40px;
+    
     grid-area: resposta;
-    margin-top: 64px;
+   
     text-align: center;
-    width: 550px;
+    
 }
 .idiomacurso{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+ 
     margin-top: 64px;
-    margin-left: 40px;
-    width: 598px;
+    grid-area:opcoes;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+
+    
+}
+.idiomacurso img{
+    max-width: 100%;
 }
 #eua{
     transition: transform 0.3s ease;
@@ -149,11 +194,15 @@ img{
 #fran:hover{
     transform: scale(1.1);
 }
-.cursos #meninacurso{
+#meninacurso{
     grid-area: meninacurso;
-    width: 450px;
+    max-width: 100%;
     object-fit: contain;
+    margin: auto;
 }
+
+
+
 
 #secao2{
     display: flex;
@@ -163,14 +212,27 @@ img{
     color: white;
     background-image:linear-gradient(to right, #FF5400,#FFBD00);
     height: 45px;
-    width: 100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
 .horarios{
-    margin-left: 15%;
+    max-width: 1280px;
+    width:100%;    
+    margin: 0 auto;
     margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.horarios #vertical{
+    display: none;
+}
+
+.horarios img{
+    max-width: 100%;
 }
 .horarios .red{
     color: #FF5400;
@@ -197,7 +259,6 @@ img{
 .horas{
     display: flex;
     align-items: flex-start;
-    width: 900px;
 }
 .horas #nove{
     margin-left: 20px;
@@ -221,42 +282,75 @@ img{
     color: white;
     background-image:linear-gradient(to right, #FF0054,#FF5400);
     height: 45px;
-    width: 100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 .depoimentos{
-    width: 100%;
+    max-width: 1280px;
+    width:100%;
+    margin:0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
-#alice{
+
+
+
+.perfis{
     border: solid 3px #FF0054;
     width: 310px;
     height: 235px;
     border-radius: 20px;
     display: grid;
-    grid-template-areas: 'foto nome' 'foto curso' 'depoi depoi' 'estrela estrela';
+    grid-template-areas:
+        'foto nome'
+        'foto curso'
+        'depoi depoi'
+        'estrela estrela';
     margin-top: 50px;
     box-shadow: 3px 3px black;
     transition: transform 0.3s ease;
 }
-#alice:hover{
+.perfis:hover{
     transform: scale(1.1);
 }
-.fotoperfil{
+.perfis h4{
+    color: black;
+    text-align: left;
+    grid-area: depoi;
+
+    margin-left: 20px;
+}
+
+#estrela {
+    display: flex;
+    align-items: center;
+    width: 110px;
+    height: auto;
+    grid-area: estrela;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+#estrela img {
+    width: 20px;
+    height: auto;
+}
+
+#alice{
+    border: solid 3px #FF0054;
+}
+
+.fotoperfil {
     border-radius: 100%;
     width: 75px;
     height: 80px;
     object-fit: cover;
-}
-#alice .fotoperfil{
     grid-area: foto;
     margin-left: 20px;
     margin-top: 20px;
 }
+
 #alice h2{
     color: #FF0054;
     grid-area: nome;
@@ -269,46 +363,21 @@ img{
     grid-area: curso;
     margin-left: -50px;
 }
-#alice h4{
-    color: black;
-    text-align: left;
-    grid-area: depoi;
-    width: 270px;
-    margin-left: 20px;
-}
+
 #estrela{
     display: flex;
     align-items: center;
-    width: 110px;
+    width: 5%;
     height: auto;
     grid-area: estrela;
     margin-left: 20px;
     margin-bottom: 10px;
 }
-#estrela img{
-    width: 20px;
-    height: auto;
-}
 
 #vinicius{
     border: solid 3px #FF2A2A;
-    width: 310px;
-    height: 235px;
-    border-radius: 20px;
-    display: grid;
-    grid-template-areas: 'foto nome' 'foto curso' 'depoi depoi' 'estrela estrela';
-    margin-top: 50px;
-    box-shadow: 3px 3px black;
-    transition: transform 0.3s ease;
 }
-#vinicius:hover{
-    transform: scale(1.1);
-}
-#vinicius .fotoperfil{
-    grid-area: foto;
-    margin-left: 20px;
-    margin-top: 20px;
-}
+
 #vinicius h2{
     color: #FF2A2A;
     grid-area: nome;
@@ -321,33 +390,12 @@ img{
     grid-area: curso;
     margin-left: -50px;
 }
-#vinicius h4{
-    color: black;
-    text-align: left;
-    grid-area: depoi;
-    width: 270px;
-    margin-left: 20px;
-}
+
 
 #paula{
     border: solid 3px #FF5400;
-    width: 310px;
-    height: 235px;
-    border-radius: 20px;
-    display: grid;
-    grid-template-areas: 'foto nome' 'foto curso' 'depoi depoi' 'estrela estrela';
-    margin-top: 50px;
-    box-shadow: 3px 3px black;
-    transition:transform 0.3s ease;
 }
-#paula:hover{
-    transform: scale(1.1);
-}
-#paula .fotoperfil{
-    grid-area: foto;
-    margin-left: 20px;
-    margin-top: 20px;
-}
+
 #paula h2{
     color: #FF5400;
     grid-area: nome;
@@ -360,13 +408,7 @@ img{
     grid-area: curso;
     margin-left: -50px;
 }
-#paula h4{
-    color: black;
-    text-align: left;
-    grid-area: depoi;
-    width: 270px;
-    margin-left: 20px;
-}
+
 
 #secao4{
     display: flex;
@@ -376,7 +418,6 @@ img{
     color: white;
     background-image:linear-gradient(to right, #024AC7,#012461);
     height: 45px;
-    width: 100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -393,7 +434,8 @@ img{
 }
 .historia h2{
     color: #012461;
-    width: 800px;
+    max-width: 410px;
+    width: 100%;
     text-align: left;
     margin-top: 95px;
 }
@@ -401,15 +443,17 @@ img{
 #matricula{
     margin: 0 auto;
     margin-top: 100px;
-    width:1280px;
-    height:716px;
+    max-width: 1380px;
+    width:100%;
+    height: 730px;
     border-radius: 55px;
     background-image:linear-gradient(to right, #FFBD00,#FF0054);
     color: white;
 }
 .informacoes{
     margin: 0 auto;
-    width: 1074px;
+    max-width: 1074px;
+    width:90%;
     height: 531px;
     display: grid;
     justify-content: space-around;
@@ -418,21 +462,22 @@ img{
 }
 #matricula h1{
     text-align: center;
-    padding: 50px;
+    padding: 10px;
     font-size: 50px;
 }
 .informacoes h3{
     margin-bottom: 10px;
     font-weight: 400;
 }
-.informacoes h4{
+.informacoes input{
     font-weight: 400;
     transition:transform 0.3s ease;
 }
-.informacoes h4:hover{
+.informacoes input:hover{
     transform: scale(1.1);
 }
-#nome h4{
+
+.informacoes input{
     text-align: left;
     padding-top: 8px;
     padding-left: 10px;
@@ -441,56 +486,28 @@ img{
     border: 1px solid rgba(0, 0, 0, 0.24);
     box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.24);
     border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
 }
-#email h4{
-    text-align: left;
-    padding-top: 8px;
-    padding-left: 10px;
-    width: 301px;
-    height: 38px;
+
+#salvar{
+    text-align: center;
+    width: 310px;
+    font-family: "Carlito", sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    margin: 0 auto;
+    height: 45px;
     border: 1px solid rgba(0, 0, 0, 0.24);
     box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.24);
     border-radius: 10px;
+    background-image: linear-gradient(to right, #FFBD00,#FF0054);
+    transition:transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#senha h4{
-    text-align: left;
-    padding-top: 8px;
-    padding-left: 10px;
-    width: 301px;
-    height: 38px;
-    border: 1px solid rgba(0, 0, 0, 0.24);
-    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.24);
-    border-radius: 10px;
-}
-#curso h4{
-    text-align: left;
-    padding-top: 8px;
-    padding-left: 10px;
-    width: 301px;
-    height: 38px;
-    border: 1px solid rgba(0, 0, 0, 0.24);
-    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.24);
-    border-radius: 10px;
-}
-#sobrenome h4{
-    text-align: left;
-    padding-top: 8px;
-    padding-left: 10px;
-    width: 301px;
-    height: 38px;
-    border: 1px solid rgba(0, 0, 0, 0.24);
-    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.24);
-    border-radius: 10px;
-}
-#celular h4{
-    text-align: left;
-    padding-top: 8px;
-    padding-left: 10px;
-    width: 301px;
-    height: 38px;
-    border: 1px solid rgba(0, 0, 0, 0.24);
-    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.24);
-    border-radius: 10px;
+#salvar:hover{
+    transform: scale(1.1);
 }
 #confirmar h4{
     text-align: left;
@@ -535,18 +552,20 @@ footer{
     display: grid;
     grid-template-areas: 'logo contato' 'logo num' 'logo  apps' 'direito direito';
     align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
 }
 .num{
     display: flex;
     flex-direction: row;
-    margin-left: 220px;
     grid-area: num;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     margin-top: 51px;
     margin-bottom: 51px;
 }
 footer h2{
-    margin-top: 8px;
-    margin-left: 10px;
     font-weight: 400;
     text-align: center;
 }
@@ -556,12 +575,12 @@ footer p{
     text-align: center;
 }
 footer #logo{
-    width: 462px;
+    max-width: 462px;
+    width: 90%;
     height: 260px;
     object-fit: cover;
     margin: 0 auto;
     grid-area: logo;
-    margin-top: 150px;
 }
 #logo{
     transition: transform 0.3s ease;
@@ -573,19 +592,24 @@ footer h1{
     grid-area: contato;
 }
 #contato{
-    margin-top: 160px;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
     text-align: center;
 }
 .apps{
     grid-area: app;
 }
 #telefone{
-    width:42px;
+    width:100%;
+    max-width: 42px;
     height:42px;
     object-fit: cover;
 }
 #insta{
-    width: 61px;
+    width: 100%;
+    max-width: 61px;
     height: 61px;
     object-fit: cover;
     transition: transform 0.3s ease;
@@ -596,7 +620,8 @@ footer h1{
 #face{
     margin-bottom: 9px;
     height: 50px;
-    width: 50px;
+    width: 100%;
+    max-width: 50px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -605,10 +630,10 @@ footer h1{
 }
 #wpp{
     margin-bottom: 12px;
-    width: 40px;
+    width: 100%;
+    max-width: 40px;
     height: 40px;
     object-fit: cover;
-    margin-left: 10px;
     transition: transform 0.3s ease;
 }
 #wpp:hover{
@@ -619,4 +644,111 @@ footer h1{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+
+
+@media(max-width:780px){
+    .depoimentos{
+        flex-direction: column;
+      
+    }
+
+    .perfis{
+        border: solid 3px #FF0054;
+        min-height: 235px;
+        border-radius: 20px;
+        display: grid;
+        grid-template-areas:
+            'foto nome'
+            'foto curso'
+            'depoi depoi'
+            'estrela estrela';
+        margin-top: 50px;
+        box-shadow: 3px 3px black;
+        transition: transform 0.3s ease;
+    }
+}
+
+@media (max-width:450px){
+    .home{
+        display: flex;
+        justify-content: space-between;
+    }
+    #hamburguer{
+        width: 80px ;
+    }
+    #logohome{
+        width: 50%;
+    }
+    #textotopo{
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    #meninatopo{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    .bt-menu{
+        display: block;
+    }
+    #menu-check:checked + .menu{
+        display: block;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    #pergunta{
+        font-size: 38px;
+        text-align: center;
+    }
+    #meninacurso{
+        display: none;
+    }
+
+    .cursos{
+        width:100%;
+        grid-template-columns:1fr;
+        column-gap: 20px;
+        grid-template-areas:
+            'pergunta'
+            'resposta'
+            'opcoes';
+    }
+    
+    #ana_paula{
+        display: none;
+    }
+    .historia h2{
+        text-align: center;
+        max-width: 300px;
+    }
+    .informacoes{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .sobre{
+        margin: 0 auto;
+        text-align: center;
+    }
+    #contato{
+        max-width: 200px;
+    }
+
+    .horarios img{
+        display: none;
+    }
+    .horarios #vertical{
+        display: block;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    #matricula{
+        height: 830px;
+    }
 }
